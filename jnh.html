@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>진앤현시큐리티 | 정보보안포털전문기업</title>
+    <style>
+        :root {
+            --primary: #0A192F;
+            --secondary: #112240;
+            --accent: #64FFDA;
+            --text: #CCD6F6;
+            --text-light: #8892B0;
+            --dark: #0A192F;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        body {
+            background-color: var(--primary);
+            color: var(--text);
+        }
+
+        section {
+            padding: 6rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            color: var(--accent);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)),
+                        url('https://cdn.pixabay.com/photo/2017/12/22/08/01/cyber-security-3033536_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        /* Solutions Grid */
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .solution-card {
+            background: var(--secondary);
+            border-radius: 10px;
+            padding: 2rem;
+            border: 1px solid var(--accent);
+            transition: transform 0.3s ease;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .solution-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 1rem;
+        }
+
+        /* Stats Section */
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 2rem;
+            background: var(--secondary);
+            border-radius: 10px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        /* Partners Section */
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .partner-logo {
+            width: 100%;
+            max-width: 150px;
+            filter: grayscale(100%) brightness(200%);
+            transition: filter 0.3s ease;
+        }
+
+        .partner-logo:hover {
+            filter: grayscale(0%) brightness(100%);
+        }
+
+        /* Contact Section */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--secondary);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            background: var(--primary);
+            border: 1px solid var(--accent);
+            border-radius: 5px;
+            color: var(--text);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: rgba(100, 255, 218, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 1. Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">정보보안포털전문기업</h1>
+                <p class="hero-subtitle">차세대 혁신기술을 앞세워 보안시장의 新트렌드를 선도하는 진앤현시큐리티</p>
+                <a href="#contact" class="btn">솔루션 문의하기</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Solutions Section -->
+    <section id="solutions">
+        <div class="container">
+            <h2 class="section-title">Our Solutions</h2>
+            <p class="section-subtitle">최적화된 보안 솔루션을 제공합니다</p>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/30/17/11/security-1873306_1280.png" alt="SECUMOM" class="solution-icon">
+                    <h3>SECUMOM PLATFORM</h3>
+                    <p>정보보안포털플랫폼</p>
+                </div>
+                <div class="solution-card">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/30/17/11/security-1873306_1280.png" alt="SECUCALL" class="solution-icon">
+                    <h3>SECUCALL SERVICE</h3>
+                    <p>정보보안관리서비스</p>
+                </div>
+                <div class="solution-card">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/30/17/11/security-1873306_1280.png" alt="SECULINKS" class="solution-icon">
+                    <h3>SECULINKS SOLUTION</h3>
+                    <p>정보보안연결솔루션</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Stats Section -->
+    <section id="stats">
+        <div class="container">
+            <h2 class="section-title">Security Impact</h2>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">23+</div>
+                    <p>Years of Experience</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <p>Clients Protected</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">99.9%</div>
+                    <p>Security Success Rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Partners Section -->
+    <section id="partners">
+        <div class="container">
+            <h2 class="section-title">Strategic Partners</h2>
+            <p class="section-subtitle">신뢰할 수 있는 파트너와 함께합니다</p>
+            <div class="partners-grid">
+                <img src="https://cdn.pixabay.com/photo/2016/11/30/17/11/security-1873306_1280.png" alt="Partner 1" class="partner-logo">
+                <img src="https://cdn.pixabay.com/photo/2016/11/30/17/11/security-1873306_1280.png" alt="Partner 2" class="partner-logo">
+                <img src="https://cdn.pixabay.com/photo/2016/11/30/17/11/security-1873306_1280.png" alt="Partner 3" class="partner-logo">
+                <img src="https://cdn.pixabay.com/photo/2016/11/30/17/11/security-1873306_1280.png" alt="Partner 4" class="partner-logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">보안 솔루션에 대해 문의하세요</p>
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="회사명">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="이메일">
+                </div>
+                <div class="form-group">
+                    <input type="tel" class="form-control" placeholder="연락처">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" rows="5" placeholder="문의사항"></textarea>
+                </div>
+                <button type="submit" class="btn">문의하기</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

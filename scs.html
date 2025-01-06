@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seoul Plastic Surgery | 프리미엄 성형외과</title>
+    <style>
+        :root {
+            --primary: #6b46c1;
+            --primary-dark: #553c9a;
+            --secondary: #9f7aea;
+            --accent: #e9d8fd;
+            --text: #2d3748;
+            --light: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text);
+            font-size: 1.2rem;
+            margin-bottom: 4rem;
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            color: var(--light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 1.5rem;
+        }
+
+        /* Before/After Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.05);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--accent);
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 1. Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Seoul Plastic Surgery</h1>
+            <p class="subtitle">세계적 수준의 한국 성형 의료 서비스</p>
+            <a href="#contact" class="btn">무료 상담 예약</a>
+        </div>
+    </section>
+
+    <!-- 2. About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Why Seoul Plastic Surgery?</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://seoulcosmeticsurgery.com/wp-content/uploads/2023/12/best-doctors-icon.png" alt="의료진" class="service-image">
+                    <div class="service-content">
+                        <h3>전문 의료진</h3>
+                        <p>20년 이상의 경험을 가진 전문의들이 함께합니다.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://seoulcosmeticsurgery.com/wp-content/uploads/2023/12/concierge-icon.png" alt="원스톱 서비스" class="service-image">
+                    <div class="service-content">
+                        <h3>원스톱 컨시어지 서비스</h3>
+                        <p>한국에서의 의료 및 여행 관련 모든 서비스를 제공합니다.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://seoulcosmeticsurgery.com/wp-content/uploads/2023/12/curated-experience-icon.png" alt="맞춤형 경험" class="service-image">
+                    <div class="service-content">
+                        <h3>맞춤형 경험</h3>
+                        <p>귀하의 요구사항에 맞는 최적의 의료진과 클리닉을 선별해드립니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">시술 안내</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://seoulcosmeticsurgery.com/wp-content/uploads/2023/12/plastic-surgery-icon.png" alt="성형외과" class="service-image">
+                    <div class="service-content">
+                        <h3>성형외과</h3>
+                        <p>최신 기술과 숙련된 의료진의 성형 시술</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://seoulcosmeticsurgery.com/wp-content/uploads/2023/12/skin-icon.png" alt="피부과" class="service-image">
+                    <div class="service-content">
+                        <h3>피부 시술</h3>
+                        <p>고급스럽고 효과적인 피부 관리 치료</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://seoulcosmeticsurgery.com/wp-content/uploads/2023/12/dental-icon.png" alt="치과" class="service-image">
+                    <div class="service-content">
+                        <h3>치과 시술</h3>
+                        <p>전문의가 제공하는 고품질 치과 치료</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Before/After Gallery -->
+    <section id="gallery">
+        <div class="container">
+            <h2 class="section-title">시술 사례</h2>
+            <div class="gallery">
+                <!-- Add gallery items -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Facilities -->
+    <section id="facilities">
+        <div class="container">
+            <h2 class="section-title">최첨단 시설</h2>
+            <!-- Add facility images and descriptions -->
+        </div>
+    </section>
+
+    <!-- 6. Medical Team -->
+    <section id="team">
+        <div class="container">
+            <h2 class="section-title">전문 의료진</h2>
+            <!-- Add team member profiles -->
+        </div>
+    </section>
+
+    <!-- 7. Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">고객 후기</h2>
+            <!-- Add testimonial cards -->
+        </div>
+    </section>
+
+    <!-- 8. Process -->
+    <section id="process">
+        <div class="container">
+            <h2 class="section-title">진료 절차</h2>
+            <!-- Add process steps -->
+        </div>
+    </section>
+
+    <!-- 9. Location -->
+    <section id="location">
+        <div class="container">
+            <h2 class="section-title">오시는 길</h2>
+            <!-- Add map and location details -->
+        </div>
+    </section>
+
+    <!-- 10. Contact -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">상담 예약</h2>
+            <form class="contact-form">
+                <!-- Add form fields -->
+            </form>
+        </div>
+    </section>
+</body>
+</html>
